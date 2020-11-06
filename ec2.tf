@@ -28,5 +28,6 @@ data "template_file" "ec2_user_data" {
 
     vars = {
         environment  = var.environment
+        github_token = var.github_token
     }
 }
