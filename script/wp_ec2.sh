@@ -51,9 +51,13 @@ Disallow: /" >> robots.txt
     echo "<?php phpinfo() ?>" >> phpinfo.php
 fi
 
+# Download TNA theme
+curl -H "Authorization: token ${github_token}" -L https://github.com/nationalarchives/tna/archive/master.zip > /build/master.zip
+
 wp core download --allow-root
 
 # Install themes and plugins
+wp theme install /build/master.zip --force --allow-root
 wp theme install https://github.com/nationalarchives/tna-base/archive/master.zip --force --allow-root
 wp theme install https://github.com/nationalarchives/tna-child-blog/archive/master.zip --force --allow-root
 wp theme install https://github.com/nationalarchives/tna-child-about-us-foi/archive/master.zip --force --allow-root
