@@ -55,10 +55,6 @@ variable "volume_size" {
     default = ""
 }
 
-variable "instance_profile" {
-    default = ""
-}
-
 variable "github_token" {
     default = ""
 }
