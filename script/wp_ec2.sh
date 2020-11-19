@@ -56,6 +56,23 @@ curl -H "Authorization: token ${github_token}" -L https://github.com/nationalarc
 
 wp core download --allow-root
 
+echo "<?php
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'user');
+define('DB_PASSWORD', 'password');
+define('DB_HOST', 'mysql');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+define('AUTH_KEY',         '3bba11cd2ed10d24a0d505ee57edc58c6366af69');
+define('SECURE_AUTH_KEY',  'ab4c1842e0ab8654d829188fe7f2cd279a012b37');
+define('LOGGED_IN_KEY',    '356e6522c933f191d574d26862a32ef5acec0b51');
+define('NONCE_KEY',        '1755d990a468794358f60c70c1903681a8e7087b');
+define('AUTH_SALT',        '68e31d7241b5f9c818504f7c38dbb316bc319d52');
+define('SECURE_AUTH_SALT', '4ae5209b77d50c4a4fa3cc1f1fcf4de48df5a2fd');
+define('LOGGED_IN_SALT',   '96fdee9ea54c4c1ba009bf7e1b68f4e83581dbc2');
+define('NONCE_SALT',       'b89f0539aaab47f3322205dcf04e5f594fc022b8');
+require_once(ABSPATH . 'wp-settings.php');" >> wp-config.php
+
 # Install themes and plugins
 wp theme install /build/master.zip --force --allow-root
 wp theme install https://github.com/nationalarchives/tna-base/archive/master.zip --force --allow-root
