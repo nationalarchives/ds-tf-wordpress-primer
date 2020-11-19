@@ -51,94 +51,59 @@ Disallow: /" >> robots.txt
     echo "<?php phpinfo() ?>" >> phpinfo.php
 fi
 
-# Download TNA theme
-curl -H "Authorization: token ${github_token}" -L https://github.com/nationalarchives/tna/archive/master.zip > /build/master.zip
+# Download TNA themes
+curl -H "Authorization: token ${github_token}" -L https://github.com/nationalarchives/tna/archive/master.zip > /build/tna.zip
+curl https://github.com/nationalarchives/tna-base/archive/master.zip > /build/tna-base.zip
+curl https://github.com/nationalarchives/tna-child-blog/archive/master.zip > /build/tna-child-blog.zip
+curl https://github.com/nationalarchives/tna-child-about-us-foi/archive/master.zip > /build/tna-child-about-us-foi.zip
+curl https://github.com/nationalarchives/tna-child-pressroom/archive/master.zip > /build/tna-child-pressroom.zip
+curl https://github.com/nationalarchives/tna-child-home/archive/master.zip > /build/tna-child-home.zip
+curl https://github.com/nationalarchives/tna-child-contact/archive/develop.zip > /build/tna-child-contact.zip
+curl https://github.com/nationalarchives/ds-wp-child-education/archive/master.zip > /build/ds-wp-child-education.zip
+curl https://github.com/nationalarchives/tna-child-legal/archive/master.zip > /build/tna-child-legal.zip
+curl https://github.com/nationalarchives/tna-child-labs/archive/master.zip > /build/tna-child-labs.zip
+curl https://github.com/nationalarchives/tna-child-suffrage/archive/master.zip > /build/tna-child-suffrage.zip
+curl https://github.com/nationalarchives/tna-child-ourrole/archive/master.zip > /build/tna-child-ourrole.zip
+curl https://github.com/nationalarchives/great-wharton-theme/archive/master.zip > /build/great-wharton-theme.zip
+curl https://github.com/nationalarchives/tna-child-latin/archive/master.zip > /build/tna-child-latin.zip
+curl https://github.com/nationalarchives/tna-child-commercial-opportunities/archive/master.zip > /build/tna-child-commercial-opportunities.zip
+curl https://github.com/nationalarchives/tna-child-black-history/archive/master.zip > /build/tna-child-black-history.zip
+curl https://github.com/nationalarchives/tna-child-design-guide/archive/master.zip > /build/tna-child-design-guide.zip
+curl https://github.com/nationalarchives/tna-child-help-legal/archive/master.zip > /build/tna-child-help-legal.zip
+curl https://github.com/nationalarchives/tna-child-get-involved/archive/master.zip > /build/tna-child-get-involved.zip
+curl https://github.com/nationalarchives/tna-child-web-archive/archive/master.zip > /build/tna-child-web-archive.zip
+curl https://github.com/nationalarchives/tna-child-domesday/archive/master.zip > /build/tna-child-domesday.zip
+curl https://github.com/nationalarchives/tna-child-about-us-research/archive/master.zip > /build/tna-child-about-us-research.zip
+curl https://github.com/nationalarchives/ds-wp-child-about-us/archive/master.zip > /build/ds-wp-child-about-us.zip
+curl https://github.com/nationalarchives/tna-child-re-using-psi/archive/master.zip > /build/tna-child-re-using-psi.zip
+curl https://github.com/nationalarchives/tna-child-archives-inspire/archive/master.zip > /build/tna-child-archives-inspire.zip
+curl https://github.com/nationalarchives/tna-child-about-us-jobs/archive/master.zip > /build/tna-child-about-us-jobs.zip
+curl https://github.com/nationalarchives/ds-wp-child-information-management/archive/master.zip > /build/ds-wp-child-information-management.zip
+curl https://github.com/nationalarchives/tna-child-first-world-war/archive/master.zip > /build/tna-child-first-world-war.zip
+curl https://github.com/nationalarchives/tna-child-cabinet-papers-100/archive/master.zip > /build/tna-child-cabinet-papers-100.zip
+curl https://github.com/nationalarchives/tna-base-child-stories-resource/archive/master.zip > /build/tna-base-child-stories-resource.zip
+curl https://github.com/nationalarchives/tna-child-about-us-commercial/archive/master.zip > /build/tna-child-about-us-commercial.zip
+curl https://github.com/nationalarchives/ds-wp-child-help-with-your-research/archive/master.zip > /build/ds-wp-child-help-with-your-research.zip
+curl https://github.com/nationalarchives/tna-currency-converter/archive/master.zip > /build/tna-currency-converter.zip
+curl https://github.com/nationalarchives/tna-long-form-template-BT/archive/master.zip > /build/tna-long-form-template-BT.zip
+curl https://github.com/nationalarchives/tna-research-redesign/archive/master.zip > /build/tna-research-redesign.zip
+curl https://github.com/nationalarchives/tna-child-archives-sector/archive/master.zip > /build/tna-child-archives-sector.zip
+curl https://cdn.nationalarchives.gov.uk/wp-plugins/acf-flexible-content.zip > /build/acf-flexible-content.zip
+curl https://cdn.nationalarchives.gov.uk/wp-plugins/acf-options-page.zip > /build/acf-options-page.zip
+curl https://cdn.nationalarchives.gov.uk/wp-plugins/acf-repeater.zip > /build/acf-repeater.zip
+curl https://cdn.nationalarchives.gov.uk/wp-plugins/advanced-custom-fields-code-area-field.zip > /build/advanced-custom-fields-code-area-field.zip
+curl https://cdn.nationalarchives.gov.uk/wp-plugins/post-tags-and-categories-for-pages.zip > /build/post-tags-and-categories-for-pages.zip
+curl https://cdn.nationalarchives.gov.uk/wp-plugins/wds-active-plugin-data.zip > /build/wds-active-plugin-data.zip
+curl https://github.com/wp-sync-db/wp-sync-db/archive/master.zip > /build/wp-sync-db.zip
+curl https://github.com/nationalarchives/tna-editorial-review/archive/master.zip > /build/tna-editorial-review.zip
+curl https://github.com/nationalarchives/tna-wp-aws/archive/master.zip > /build/tna-wp-aws.zip
+curl https://github.com/nationalarchives/tna-password-message/archive/master.zip > /build/tna-password-message.zip
+curl https://github.com/nationalarchives/tna-profile-page/archive/master.zip > /build/tna-profile-page.zip
+curl https://github.com/nationalarchives/tna-eventbrite-api/archive/master.zip > /build/tna-eventbrite-api.zip
+curl https://github.com/nationalarchives/tna-forms/archive/master.zip > /build/tna-forms.zip
+curl https://github.com/nationalarchives/tna-newsletter/archive/master.zip > /build/tna-newsletter.zip
 
 wp core download --allow-root
-
-echo "<?php
-define('DB_NAME', 'wordpress');
-define('DB_USER', 'user');
-define('DB_PASSWORD', 'password');
-define('DB_HOST', 'mysql');
-define('DB_CHARSET', 'utf8');
-define('DB_COLLATE', '');
-define('AUTH_KEY',         '3bba11cd2ed10d24a0d505ee57edc58c6366af69');
-define('SECURE_AUTH_KEY',  'ab4c1842e0ab8654d829188fe7f2cd279a012b37');
-define('LOGGED_IN_KEY',    '356e6522c933f191d574d26862a32ef5acec0b51');
-define('NONCE_KEY',        '1755d990a468794358f60c70c1903681a8e7087b');
-define('AUTH_SALT',        '68e31d7241b5f9c818504f7c38dbb316bc319d52');
-define('SECURE_AUTH_SALT', '4ae5209b77d50c4a4fa3cc1f1fcf4de48df5a2fd');
-define('LOGGED_IN_SALT',   '96fdee9ea54c4c1ba009bf7e1b68f4e83581dbc2');
-define('NONCE_SALT',       'b89f0539aaab47f3322205dcf04e5f594fc022b8');
-require_once(ABSPATH . 'wp-settings.php');" >> wp-config.php
-
-# Install themes and plugins
-wp theme install /build/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-base/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-blog/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-about-us-foi/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-pressroom/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-home/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-contact/archive/develop.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/ds-wp-child-education/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-legal/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-labs/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-suffrage/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-ourrole/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/great-wharton-theme/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-latin/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-commercial-opportunities/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-black-history/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-design-guide/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-help-legal/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-get-involved/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-web-archive/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-domesday/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-about-us-research/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/ds-wp-child-about-us/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-re-using-psi/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-archives-inspire/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-about-us-jobs/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/ds-wp-child-information-management/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-first-world-war/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-cabinet-papers-100/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-base-child-stories-resource/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-about-us-commercial/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/ds-wp-child-help-with-your-research/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-currency-converter/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-long-form-template-BT/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-research-redesign/archive/master.zip --force --allow-root
-wp theme install https://github.com/nationalarchives/tna-child-archives-sector/archive/master.zip --force --allow-root
-wp plugin install amazon-s3-and-cloudfront --force --allow-root
-wp plugin install co-authors-plus --force --allow-root
-wp plugin install wordpress-seo --force --allow-root
-wp plugin install wp-mail-smtp --force --allow-root
-wp plugin install jquery-colorbox --force --allow-root
-wp plugin install simple-footnotes --force --allow-root
-wp plugin install advanced-custom-fields --force --allow-root
-wp plugin install classic-editor --force --allow-root
-wp plugin install cms-tree-page-view --force --allow-root
-wp plugin install tablepress --force --allow-root
-wp plugin install tinymce-advanced --force --allow-root
-wp plugin install transients-manager --force --allow-root
-wp plugin install wordpress-importer --force --allow-root
-wp plugin install wp-smtp --force --allow-root
-wp plugin install wp-super-cache --force --allow-root
-wp plugin install https://cdn.nationalarchives.gov.uk/wp-plugins/acf-flexible-content.zip --force --allow-root
-wp plugin install https://cdn.nationalarchives.gov.uk/wp-plugins/acf-options-page.zip --force --allow-root
-wp plugin install https://cdn.nationalarchives.gov.uk/wp-plugins/acf-repeater.zip --force --allow-root
-wp plugin install https://cdn.nationalarchives.gov.uk/wp-plugins/advanced-custom-fields-code-area-field.zip --force --allow-root
-wp plugin install https://cdn.nationalarchives.gov.uk/wp-plugins/post-tags-and-categories-for-pages.zip --force --allow-root
-wp plugin install https://cdn.nationalarchives.gov.uk/wp-plugins/wds-active-plugin-data.zip --force --allow-root
-wp plugin install https://github.com/wp-sync-db/wp-sync-db/archive/master.zip --force --allow-root
-wp plugin install https://github.com/nationalarchives/tna-editorial-review/archive/master.zip --force --allow-root
-wp plugin install https://github.com/nationalarchives/tna-wp-aws/archive/master.zip --force --allow-root
-wp plugin install https://github.com/nationalarchives/tna-password-message/archive/master.zip --force --allow-root
-wp plugin install https://github.com/nationalarchives/tna-profile-page/archive/master.zip --force --allow-root
-wp plugin install https://github.com/nationalarchives/tna-eventbrite-api/archive/master.zip --force --allow-root
-wp plugin install https://github.com/nationalarchives/tna-forms/archive/master.zip --force --allow-root
-wp plugin install https://github.com/nationalarchives/tna-newsletter/archive/master.zip --force --allow-root
 
 # Set file permissions uploads directory
 sudo chown -R apache /var/www/html/wp-content/uploads/
