@@ -12,8 +12,7 @@ resource "aws_instance" "wp_primer" {
         volume_size = var.volume_size
         encrypted   = true
     }
-
-    iam_instance_profile = var.instance_profile
+    
     user_data            = data.template_file.ec2_user_data.rendered
 
     tags = {
