@@ -54,6 +54,7 @@ find /var/www -type d -exec chmod 775 {} \;
 find /var/www -type f -exec chmod 664 {} \;
 
 # Download TNA themes
+mkdir /home/ec2-user/themes
 curl -H "Authorization: token ${github_token}" -L https://github.com/nationalarchives/tna/archive/master.zip > /home/ec2-user/themes/tna.zip
 curl https://github.com/nationalarchives/tna-base/archive/master.zip > /home/ec2-user/themes/tna-base.zip
 curl https://github.com/nationalarchives/tna-child-blog/archive/master.zip > /home/ec2-user/themes/tna-child-blog.zip
