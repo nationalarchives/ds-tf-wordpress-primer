@@ -23,10 +23,9 @@ resource "aws_instance" "wp_primer" {
 }
 
 data "template_file" "ec2_user_data" {
-    template = file("${path.module}/script/wp_ec2.sh")
+    template = file("${path.module}/script/userdata.sh")
 
     vars = {
         environment  = var.environment
-        github_token = var.github_token
     }
 }
